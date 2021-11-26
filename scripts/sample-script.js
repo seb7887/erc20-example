@@ -12,14 +12,15 @@ async function main() {
   // If this script is run directly using `node` you may want to call compile
   // manually to make sure everything is compiled
   // await hre.run('compile');
+  const [owner] = await hre.ethers.getSigners();
 
   // We get the contract to deploy
-  const Greeter = await hre.ethers.getContractFactory("Greeter");
-  const greeter = await Greeter.deploy("Hello, Hardhat!");
+  const Seb = await hre.ethers.getContractFactory("Seb");
+  const seb = await Seb.deploy(10);
 
-  await greeter.deployed();
+  await seb.deployed();
 
-  console.log("Greeter deployed to:", greeter.address);
+  console.log("Seb Token deployed to:", seb.address);
 }
 
 // We recommend this pattern to be able to use async/await everywhere

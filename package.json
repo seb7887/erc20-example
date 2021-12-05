@@ -10,8 +10,9 @@
   },
   "scripts": {
     "compile": "hardhat compile",
-    "run-node": "hardhat node",
-    "deploy": "hardhat run --network localhost scripts/sample-script.js",
-    "console": "hardhat console --network localhost"
+    "chain": "hardhat node",
+    "deploy": "hardhat run --network localhost scripts/deploy.js",
+    "console": "hardhat console --network localhost",
+    "test": "hardhat test --network localhost"
   }
 }
